@@ -28,4 +28,4 @@ create policy attendance_select on attendance for select to authenticated using(
 create policy admin_attendance on attendance for all to authenticated using(my_role()='admin') with check(my_role()='admin');
 create policy teacher_attendance on attendance for all to authenticated using(exists(select 1 from learners l join classes c on c.id=l.class_id where l.id=learner_id and c.teacher_id=auth.uid())) with check(exists(select 1 from learners l join classes c on c.id=l.class_id where l.id=learner_id and c.teacher_id=auth.uid()));
 -- Bootstrap first admin: create the invitation BEFORE signing up.
-insert into invitations(email,full_name,role) values('iyongemail@example.com','Jerny Lowee Gellang','admin');
+insert into invitations(email,full_name,role) values('CHANGE_TO_ADMIN_EMAIL','Jerny Lowee Gellang','admin');

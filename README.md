@@ -33,3 +33,11 @@ Use Chrome/Edge. Select Print, paper 5.5 x 8.5 in if available, margins None, sc
 
 ## Security note
 The included RLS policies restrict rows by role and class assignment. Before official school use, conduct a school/SDO privacy, records-management, and SF9-template review. Do not use sample or public links for live learner data until reviewed.
+
+
+## Admin testing and delete update
+- Admin Testing creates a TEST SECTION and sample learner with grades and attendance.
+- Delete buttons are available for invitations, classes, and learners.
+- Deleting a learner also deletes grades and attendance through cascade.
+- Classes with assigned learners cannot be deleted until learners are removed.
+- Auth users are removed separately in Supabase Authentication.
